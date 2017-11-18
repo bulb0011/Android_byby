@@ -1,0 +1,11 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Android_byby\dbutils\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from E:\Android_byby\dbutils\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from E:\Android_byby\dbutils\src\main\AndroidManifest.xml:1:1-5:12
+	package
+		ADDED from E:\Android_byby\dbutils\src\main\AndroidManifest.xml:1:11-31
+		INJECTED from E:\Android_byby\dbutils\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_byby\dbutils\src\main\AndroidManifest.xml
+application
+ADDED from E:\Android_byby\dbutils\src\main\AndroidManifest.xml:3:5-19

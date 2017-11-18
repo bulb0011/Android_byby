@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+version = "3.5.0"
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+//        minSdkVersion 14
+//        targetSdkVersion 25
+//        versionCode 20170405
+//        versionName version
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs = ['src/main/java']
+        }
+    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_6
+//        targetCompatibility JavaVersion.VERSION_1_6
+//    }
+}
+

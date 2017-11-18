@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+//apply plugin: "kotlin-kapt"
+
+//apply plugin: "kotlin-kapt"
+def AAVersion = '4.3.1'
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.android.www.myapplication"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //    aapt "org.androidannotations:androidannotations:$AAVersion"
+
+
+//    kapt "org.androidannotations:androidannotations:$AAVersion"
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    implementation "org.androidannotations:androidannotations-api:$AAVersion"
+
+
+    implementation project(':dbutils')
+    implementation 'com.google.code.gson:gson:2.8.1'
+    //gson
+    annotationProcessor "com.github.bumptech.glide:compiler:4.0.0"
+    implementation 'com.sunfusheng:glideimageview:1.2.0'
+    //加载图片框架
+    implementation 'com.lzy.net:okgo:3.0.4'
+    //网络请求框架
+    implementation files('libs/TypeBuilder.jar')
+    //联网用到的Gson解析
+    implementation 'com.kaopiz:kprogresshud:1.1.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+
+    /**
+     * rxjava
+     */
+    implementation 'com.lzy.net:okrx2:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-navi:2.2.0'
+}
+repositories {
+    mavenCentral()
+}
