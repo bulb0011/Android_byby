@@ -1,5 +1,7 @@
 package com.android.www.myapplication;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
@@ -79,6 +81,16 @@ public class A extends BaseActivity {
 
                             bxj =mergeData.bxj;
                             jkxts =mergeData.jkxts;
+
+                            Intent intent=new Intent();
+
+                            Bundle bundle=new Bundle();
+
+                            bundle.putSerializable("data",mergeData);
+
+                            intent.putExtras(bundle);
+
+                            A.this.setResult(1009,intent);
 
                         }
 

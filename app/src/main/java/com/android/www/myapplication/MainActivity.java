@@ -1,5 +1,6 @@
 package com.android.www.myapplication;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.android.www.myapplication.ben.MergeData;
 import com.android.www.myapplication.ben.ResultData;
@@ -50,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
 //        HttpParams params = new HttpParams();
 
-
-
         waveView.settoContext(this);
 
         waveView.setDuration(5000);
@@ -75,12 +75,40 @@ public class MainActivity extends AppCompatActivity {
 //                A_.intent(MainActivity.this).start();
 
 //                bbbb.stp();
+
+                Intent intent=new Intent();
+
+                intent.setClass(MainActivity.this,A_.class);
+
+                startActivityForResult(intent,1009);
             }
 
         };
 
         timer.start();
 
+        Intent intent=new Intent();
+
+        intent.setClass(this,A_.class);
+
+        startActivityForResult(intent,1009);
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (resultCode){
+            case 1009:
+                MergeData mergeData =(MergeData)data.getSerializableExtra("data");
+                Toast.makeText(this,"1009"+"="+mergeData.bxj.size(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"1009"+"="+mergeData.jkxts.size(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"1009",Toast.LENGTH_SHORT).show();
+                break;
+
+        }
 
     }
 
