@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.android.www.myapplication.ben.ArticleBean;
 import com.android.www.myapplication.ben.ArticleBeanForCache;
@@ -54,6 +55,17 @@ public class A extends BaseActivity {
 
 
         Net();
+
+        Integer interger=new Integer(5);
+
+        Integer interger1=new Integer(5);
+
+        if (interger==interger1){
+            Toast.makeText(this,"",Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(this,"",Toast.LENGTH_SHORT).show();
+
+        }
 
 //        TT();
 
