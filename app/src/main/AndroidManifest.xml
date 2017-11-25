@@ -20,6 +20,10 @@
 
         <activity android:name=".A_"></activity>
 
+        <activity android:name=".Text_Kotlin"></activity>
+
+        <activity android:name=".Kotlin_One_Text_"></activity>
+
     </application>
 
 </manifest>

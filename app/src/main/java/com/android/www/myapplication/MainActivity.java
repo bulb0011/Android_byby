@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
     private CountDownTimer timer;
     private Button bt1;
 
+//    @ViewById(R.id.bt2)
+    Button bt2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 A_.intent(MainActivity.this).start();
+            }
+        });
+
+        findViewById(R.id.bt2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent =new Intent(MainActivity.this,Text_Kotlin.class);
+
+                startActivity(intent);
+
             }
         });
 
@@ -87,14 +101,27 @@ public class MainActivity extends AppCompatActivity {
 
         timer.start();
 
-        Intent intent=new Intent();
-
-        intent.setClass(this,A_.class);
-
-        startActivityForResult(intent,1009);
+//        Intent intent=new Intent();
+//
+//        intent.setClass(this,A_.class);
+//
+//        startActivityForResult(intent,1009);
 
 
     }
+
+//    @Click(R.id.bt2)
+//    void onClick(View  view){
+//
+//        switch (view.getId()){
+//
+//            case R.id.bt2:
+//
+//                break;
+//
+//        }
+//
+//    }
 
 
     @Override

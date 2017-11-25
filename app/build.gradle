@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-//apply plugin: "kotlin-kapt"
+apply plugin: "kotlin-kapt"
 
 //apply plugin: "kotlin-kapt"
 def AAVersion = '4.3.1'
@@ -32,7 +32,7 @@ dependencies {
     //    aapt "org.androidannotations:androidannotations:$AAVersion"
 
 
-//    kapt "org.androidannotations:androidannotations:$AAVersion"
+    kapt "org.androidannotations:androidannotations:$AAVersion"
     annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
     implementation "org.androidannotations:androidannotations-api:$AAVersion"
 
