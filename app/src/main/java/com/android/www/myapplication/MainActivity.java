@@ -21,6 +21,8 @@ import com.lzy.okgo.model.HttpParams;
 import com.lzy.okgo.model.Response;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -107,6 +109,10 @@ public class MainActivity extends AppCompatActivity {
 //
 //        startActivityForResult(intent,1009);
 
+
+        List<String> list=new ArrayList<>();
+
+        list.add("sadas");
 
     }
 
