@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.android.www.myapplication.ben.User_Kotlit
 import org.androidannotations.annotations.AfterViews
 import org.androidannotations.annotations.Click
 import org.androidannotations.annotations.EActivity
@@ -47,6 +48,24 @@ open class Kotlin_One_Text : AppCompatActivity(){
         val list = ArrayList<String>()
 
         list.add("sadas")
+
+        text(1,"as",list);
+
+
+        var us :User_Kotlit;
+
+    }
+
+    fun text(int: Int, string:String,list: AbstractList<String>){
+    }
+
+    fun obj( user_kotlit :User_Kotlit):User_Kotlit{
+
+        var user_kotlit=User_Kotlit();
+
+        user_kotlit.name="小明";
+
+        return user_kotlit;
 
     }
 
