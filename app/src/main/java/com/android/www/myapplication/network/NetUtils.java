@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.android.www.myapplication.ben.ResultData;
+import com.android.www.myapplication.ben.User;
 import com.android.www.myapplication.db.DBHelper;
 import com.android.www.myapplication.utils.UserCache;
 import com.lzy.okgo.OkGo;
